@@ -1,0 +1,16 @@
+Welcome to Unit Converter! This tool allows you to easily convert between different units of measurement.
+
+Supported Conversions:
+1. Length: Convert between meters, kilometers, miles, feet, inches, etc.
+2. Weight: Convert between kilograms, grams, pounds, ounces, etc.
+3. Temperature: Convert between Celsius, Fahrenheit, and Kelvin.
+4. Speed: Convert between km/h, mph, m/s, etc.
+5. Time: Convert between seconds, minutes, hours, days, etc.
+
+How to Use:
+1. Select the category (Length, Weight, Temperature, etc.).
+2. Choose the unit you want to convert from and to.
+3. Enter the value.
+4. Click on the "Convert" button to get the result.
+
+For accurate results, make sure to enter correct values.
