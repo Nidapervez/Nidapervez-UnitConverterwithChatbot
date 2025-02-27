@@ -1,0 +1,32 @@
+# Ignore environment variables
+.env
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# IDE/editor files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Logs and database files
+*.log
+*.sqlite3
+
+# MacOS files
+.DS_Store
+
+# System files
+Thumbs.db
