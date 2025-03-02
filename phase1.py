@@ -11,7 +11,7 @@ from langchain.indexes import VectorstoreIndexCreator
 # Ensure API key is set
 API_KEY = os.getenv("GROQ_API_KEY")
 if not API_KEY:
-    st.error("\ud83d\udea8 Error: GROQ API key is missing! Set it in the environment or pass it in the code.")
+    st.error(" Error: GROQ API key is missing! Set it in the environment or pass it in the code.")
     st.stop()
 
 # Streamlit UI Configuration
