@@ -6,9 +6,14 @@ from langchain.chains import RetrievalQA
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
-
+  # Updated import
 from langchain.indexes import VectorstoreIndexCreator
 
+# Ensure API key is set
+API_KEY = os.getenv("GROQ_API_KEY")
+if not API_KEY:
+    st.error("🚨 Error: GROQ API key is missing! Set it in the environment or pass it in the code.")
+    st.stop()
 
 # Streamlit UI Configuration
 st.set_page_config(page_title="Neon Unit Converter & Chatbot", layout="wide")
@@ -119,11 +124,7 @@ if prompt:
 
     try:
         vectorstore = get_vectorstore()
-        model = "llama3-8b-8192"
-        groq_chat = ChatGroq(
-            groq_api_key=os.environ.get("GROQ_API_KEY"),
-            model_name=model
-        )
+        groq_chat = ChatGroq(groq_api_key=API_KEY, model_name="llama3-8b-8192")
 
         chain = RetrievalQA.from_chain_type(
             llm=groq_chat,
@@ -139,6 +140,6 @@ if prompt:
         st.session_state.messages.append({"role": "assistant", "content": response})
 
     except Exception as e:
-        st.error(f"Error: {str(e)}")
+        st.error(f"🚨 Error: {str(e)}")
 
 st.markdown("</div>", unsafe_allow_html=True)
