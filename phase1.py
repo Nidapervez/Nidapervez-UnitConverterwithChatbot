@@ -5,7 +5,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains import RetrievalQA
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.embeddings import HuggingFaceEmbeddings  # Correct import
+from langchain_huggingface import HuggingFaceEmbeddings
+  # Correct import
 from langchain.indexes import VectorstoreIndexCreator
 
 # Ensure API key is set
