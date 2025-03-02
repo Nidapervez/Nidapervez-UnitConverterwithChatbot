@@ -5,8 +5,10 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains import RetrievalQA
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
+
 from langchain.indexes import VectorstoreIndexCreator
+
 
 # Streamlit UI Configuration
 st.set_page_config(page_title="Neon Unit Converter & Chatbot", layout="wide")
